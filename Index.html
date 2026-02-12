@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pour VM 💌</title>
+
+<style>
+body {
+  margin: 0;
+  height: 100vh;
+  background: linear-gradient(#0f2027, #203a43, #2c5364);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Georgia', serif;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.envelope {
+  width: 200px;
+  height: 120px;
+  background: #c0392b;
+  position: relative;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: transform 0.3s ease;
+}
+
+.envelope:hover {
+  transform: scale(1.05);
+}
+
+.envelope::before {
+  content: "💌";
+  font-size: 60px;
+  position: absolute;
+  top: 25px;
+  left: 65px;
+}
+
+.letter {
+  display: none;
+  max-width: 600px;
+  background: rgba(0,0,0,0.6);
+  padding: 25px;
+  border-radius: 15px;
+  animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+</style>
+</head>
+
+<body>
+
+<div class="envelope" onclick="openLetter()"></div>
+
+<div class="letter" id="letter">
+<p><strong>Mon cher VM,</strong> 💌✨</p>
+
+<p>Même si nos échanges se font à travers un écran 💻, ce lien qui nous unit est bien réel et précieux à mes yeux. 💖 Trois jours après ton anniversaire 🎂, je prends un moment pour te dire à quel point tu comptes pour moi. 💫</p>
+
+<p>Chaque message 📱, chaque sourire virtuel 😊, chaque moment partagé a construit quelque chose d’unique entre nous. 💑 Et dans trois jours, nous fêterons une année entière ensemble 🎉, une année de rires 😂, de confidences 🤫, et de rêves partagés 🌙.</p>
+
+<p>Je veux que cette année à venir soit encore plus belle 🌷, plus forte 💪, et pleine de moments exceptionnels — comme toi, VM. 🌟 Tu es mon refuge calme 🕊️, mon compagnon dans cette aventure 🚀, et je suis prête à célébrer chaque instant avec toi. 🎈</p>
+
+<p>Merci d’être là, même au loin 🌍, et merci d’être celui qui illumine mes journées ☀️.</p>
+
+<p>Avec tout mon amour, ❤️<br>[Manaheva] 💕</p>
+</div>
+
+<audio id="music" loop>
+  <source src="https://cdn.pixabay.com/audio/2022/03/15/audio_0d5b5d63b5.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+function openLetter() {
+  document.querySelector('.envelope').style.display = "none";
+  document.getElementById('letter').style.display = "block";
+  document.getElementById('music').play();
+}
+</script>
+
+</body>
+</html>
